@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  background-color: #fefae0;
+  color: #3a3a3a;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 10vmin;
+  background: linear-gradient(180deg, #3a5a40, #dad7cd);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vmin;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  background-color: #e9edc9;
+  border-radius: 2vmin;
+  font-size: 10vmin;
+  color: #3a5a40;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out;
+  animation: opac 1.5s ease-in-out;
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 2vmin;
+    opacity: 1;
+  }
+}
+
+.box:hover {
+  background-color: #ccd5ae;
+}
+
+.reset {
+  height: 6vmin;
+  width: 15vmin;
+  background: linear-gradient(to left, #3a5a40, #f1d67c);
+  color: #fefae0;
+  font-size: 2vmin;
+  font-weight: 500;
+  margin-top: 5vmin;
+  border: none;
+  border-radius: 1vmin;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+.reset:hover {
+  background-color: #e1a500;
+  transform: scale(1.12);
+}
+
+.win {
+  animation: winner-bounce 1s ease;
+}
+
+@keyframes winner-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.msg {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 5vmin;
+  background: linear-gradient(180deg, #f12711, #f5af19);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 2vmin;
+}
+
+.hide {
+  display: none;
+}
+
+.winBox {
+  background-color: #ccd5ae;
+}

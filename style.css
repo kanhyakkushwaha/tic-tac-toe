@@ -20,7 +20,7 @@ h1 {
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 5vmin;
+  margin-top: 4vmin;
 }
 
 .game {
@@ -100,7 +100,7 @@ h1 {
   background: linear-gradient(180deg, #f12711, #f5af19);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 2vmin;
+  margin-top: 1vmin;
 }
 
 .hide {
@@ -108,7 +108,7 @@ h1 {
 }
 
 .winBox {
-  background-color: #ccd5ae;
+  background-color: #ebee12;
 }
 
 @media (max-width: 600px) {

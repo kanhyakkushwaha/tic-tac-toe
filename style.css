@@ -108,7 +108,7 @@ h1 {
 }
 
 .winBox {
-  background-color: #ebee12;
+  background-color: #ebee12 !important;
 }
 
 @media (max-width: 600px) {

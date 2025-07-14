@@ -20,9 +20,11 @@ const startGame=boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnO) {
       box.innerText = "O";
+      msg.innerText="Controller to X!"
       turnO = false;
     } else {
       box.innerText = "X";
+      msg.innerText="Controller to O!"
       turnO = true;
     }
     box.disabled = true;
@@ -62,8 +64,6 @@ const checkWinner = () => {
       if (val1 === val2 && val1 === val3) {
         winnerFound = true;
         game.classList.add("win");
-        reset.innerText = "New Game";
-        msg.classList.remove("hide");
         showWinner(val1, p1, p2, p3);
         break;
       }
@@ -80,7 +80,6 @@ const checkWinner = () => {
     if (isFull) {
       game.classList.add("win");
       reset.innerText = "New Game";
-      msg.classList.remove("hide");
       showWinner(null); // passing null to show draw
     }
   }
@@ -88,13 +87,20 @@ const checkWinner = () => {
 
 const resetGame = () => {
   for (box of boxes) {
+    box.classList.add('scrub');
     box.innerText = "";
     box.disabled = false;
     box.classList.remove("winBox");
+    setTimeout(() => {
+    boxes.forEach(box => {
+      box.textContent = '';
+      box.classList.remove('scrub');
+    });
+  }, 300);
+
   }
-  msg.classList.add("hide");
-  reset.innerText = "Reset Game";
   game.classList.remove("win");
+  msg.innerText="Start the Battle..";
   turnO = true;
   startGame();
 };

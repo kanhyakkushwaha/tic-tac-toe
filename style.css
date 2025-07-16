@@ -90,7 +90,7 @@ h1 {
   position: fixed;
   bottom: 10px;
   left: 50%;
-  background: linear-gradient(60deg, #3a5a40, #dad7cd);
+  background-color:#3a5a40;
   color: #fefae0;
   font-size: 20px;
   font-weight: 500;
@@ -98,13 +98,15 @@ h1 {
   border-radius: 25px;
   cursor: pointer;
   transform: translate(-50%);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in;
   margin-top: 5px;
 }
 
 .reset:hover {
-  transform: scale(1.12) translate(-45%);
+  transform: scale(1.07) translate(-45%);
   box-shadow: 0 8px 16px rgba(232, 204, 50, 0.2);
+  background: linear-gradient(90deg, #3a5a40, #dad7cd);
+  color:#fcec86;
 }
 
 .win {
@@ -150,9 +152,8 @@ h1 {
   }
 
   .reset {
-    height: 50px;
     width: 65%;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     margin-top: 25px;
     border-radius: 18px;
@@ -161,5 +162,6 @@ h1 {
 
   reset:hover {
     transform: scale(1.001) translate(-45%);
+    background: linear-gradient(60deg, #3a5a40, #dad7cd);
   }
 }

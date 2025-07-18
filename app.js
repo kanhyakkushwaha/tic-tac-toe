@@ -79,7 +79,6 @@ const checkWinner = () => {
 
     if (isFull) {
       game.classList.add("win");
-      reset.innerText = "New Game";
       showWinner(null); // passing null to show draw
     }
   }
@@ -100,7 +99,7 @@ const resetGame = () => {
 
   }
   game.classList.remove("win");
-  msg.innerText="Start the Battle..";
+  msg.innerText="Start the Battle..O";
   turnO = true;
   startGame();
 };
